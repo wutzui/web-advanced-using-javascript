@@ -2,8 +2,8 @@
 // =================================================================================
 // Grid-specific variables.
 // =================================================================================
-$grid-width: 75px;                                             // 75 pixels
-$grid-gutter: $grid-width / 3;                                 // 25 pixels
+$grid-width: 60px;                                             // 60 pixels
+$grid-gutter: $grid-width / 3;                                 // 20 pixels
 $color-grid-column: rgba(200, 0, 0, 0.2);
 $color-grid-baseline: rgba(56, 255, 255, 0.8);
 
@@ -46,7 +46,8 @@ $color-font-body: $color-light-gray;
 // =================================================================================
 // Body sizing.
 // =================================================================================
-$width-body:  (14 * ($grid-width + $grid-gutter) + $grid-width); // 1475
+$width-body:  1600px;
+$width-content : (14 * ($grid-width + $grid-gutter) + $grid-width); // 1180
 
 
 // =================================================================================

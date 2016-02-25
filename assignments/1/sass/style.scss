@@ -4,15 +4,17 @@
 @import 'grid';
 
 html{
+   
+}
+
+body{
    max-width: $width-body;
    margin: 0 auto;
 
    background: {
       color: $color-background;
    }
-}
 
-body{
    font-family: $font-stack-pacifico;
    line-height: $leading;
 }
@@ -21,4 +23,12 @@ h1 {
    font-size: 2 * $font-size;   // 32px
    line-height: 1.2em;
 }
+.content{
+   max-width : $width-content;
+   margin: 0 auto;
+}
 
+.full-width-panel{
+   width:   100%;
+   position: realtive;
+}
