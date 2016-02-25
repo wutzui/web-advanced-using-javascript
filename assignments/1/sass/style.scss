@@ -1,1 +1,385 @@
+@import 'variables';
+@import 'grid';
 @import 'reset';
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+
+
+ $gridgutter : $grid-width + $grid-gutter;
+ $column : 60px;
+ $gutter : $column / 3;
+ $column-and-gutter: $column + $gutter;
+ $font-size: 16px;
+$leading: 1.5 * $font-size;
+$bgcolor: #f4f4f4;
+$text-align: justify;
+
+
+
+
+$raleway: 'Raleway', sans-serif;
+
+$pacifico: 'Pacifico', cursive;
+
+$font-stack: 'helvetica', 'Arial', sans-serif;
+
+// $margin-top: 6 * $leading;
+
+
+
+body{
+max-width : $width-body;
+}
+
+
+.header-image{
+	position: absolute;
+	width: 16 * ($gridgutter);
+	height: 26 * $leading;
+}
+
+
+#focus{
+	position: absolute;
+	width : $grid-width;
+	
+	margin: {
+		left: (6.75 * $gridgutter);
+		top : 4.75 * $leading;
+	}
+}
+
+header{
+
+	h1{
+
+		position: absolute;
+		margin:{
+		left : 7.5 * $gridgutter;
+		top : 4.9 * $leading;
+		}
+
+		font-size: 3.6 * $font-size;
+		font-family: $pacifico;
+	}
+
+
+	p{
+		position: absolute;
+		margin: {
+		left : 5 * $gridgutter;
+		top : 9 * $leading;
+		}
+		font:{
+			size : 2 * $font-size;
+			family : $raleway;
+		}
+	}
+
+
+}
+
+
+#iphone{
+	position : absolute;
+		
+	padding: {
+		left: 6 * ( $gridgutter);
+		top: 13 * $leading;
+	}
+}
+
+
+
+#featureONE{
+	position: absolute;
+	width: 2 * ($gridgutter) + $grid-width;
+  	margin: {
+     		left: 2.75 * ($gridgutter);
+     		top: (27 * $leading);
+   }   
+}
+
+
+#featureTWO{
+	position: absolute;
+	width: 2 * ($gridgutter) + $grid-width;
+  	margin: {
+     		left: 10 * ($gridgutter);
+     		top: (27 * $leading);
+   }   
+}
+
+
+.title{
+	font-size: 1.3 * $font-size;
+	line-height: 1 * $leading;
+	font-family: $raleway;
+	font-weight : 600;
+	padding-top: 0.25 * $leading;
+	padding-bottom: 0.8 * $leading;
+}
+
+
+
+.text{
+	font-size: 0.9 * $font-size;
+	line-height: 1 * $leading;
+	font-family: $raleway;
+	font-weight: 300;
+	padding-bottom: 1.78 * $leading;
+	text-align: $text-align;
+}
+
+
+
+#container{
+	position : absolute;
+	width : 18 * $gridgutter;
+	height : 18 * $leading;
+	margin:{
+		top: 45 * $leading;
+	}
+}
+
+#get{
+	position : absolute;
+	width : 5 * $gridgutter;
+	margin:{
+		left: 1.5 * ($gridgutter);
+		top: 47 * $leading;	
+	} 
+}
+
+#video{
+	position: absolute;
+	margin: {
+    	left: 8 * ($gridgutter); 
+    	top: 47.5 * $leading;	
+	}
+}
+
+#playbar{
+	position: absolute;
+	margin: {
+    	left: 9 * ($gridgutter); 
+    	top: 58 * $leading;	
+	}
+}
+
+#play{
+	position: absolute;
+	margin: {
+    	left: 8.15 * ($gridgutter); 
+    	top: 58 * $leading;	
+	}
+}
+
+
+
+#icon1{
+	position: absolute;
+	margin: {
+    	left: 1.5 * ($gridgutter); 
+    	top: 54 * $leading;	
+	}
+}
+
+
+
+#icon2{
+	position: absolute;
+	margin: {
+    	left: 2.5 * ($gridgutter); 
+    	top: 54 * $leading;	
+	}
+}
+
+
+#icon3{
+	position: absolute;
+	margin: {
+    	left: 3.5 * ($gridgutter); 
+    	top: 54 * $leading;	
+	}
+}
+
+
+
+#comment{
+	position: absolute;
+	margin: {
+    	left: 3.5 * ($gridgutter); 
+    	top: 65 * $leading;	
+	}
+	font:{
+		size : 1.5 * $font-size;
+		family : $raleway;
+	}
+}
+
+
+#guy{
+	position: absolute;
+	margin: {
+    	left: 7 * ($gridgutter); 
+    	top: 67 * $leading;	
+	}
+	font:{
+		size :  12px;
+		family : $raleway;
+		weight: 600;
+	}
+}
+
+#blogger{
+	position: absolute;
+	margin: {
+    	left: 7.7 * ($gridgutter); 
+    	top: 67 * $leading;	
+	}
+	font:{
+
+		size :  12px;
+		family : $raleway;
+
+	}
+}
+
+
+#people{
+	position: absolute;
+	width : 16 * $gridgutter;
+	height : 13 * $leading;
+	margin: {
+    	 
+    	top: 70 * $leading;	
+	}
+}
+
+#activeperson{
+	position: absolute;
+	width : 0.79 * $gridgutter;
+	height : 3.25 * $leading;
+	margin: {
+    	left: 9.15 * ($gridgutter); 
+    	top: 73.3 * $leading;	
+	}
+}
+
+
+.hi{
+	position: absolute;
+	margin: {
+    	left: 7 * ($gridgutter); 
+    	top: 86 * $leading;	
+	}
+	font:{
+		size :  $font-size;
+		family : $raleway;
+		weight: 600;
+	}
+}
+
+.lore{
+	position: absolute;
+	margin: {
+    	left: 6 * ($gridgutter); 
+    	top: 87 * $leading;	
+	}
+	font:{
+		size :  12px;
+		family : $raleway;
+		weight: 300;
+	}
+}
+
+
+#twit{
+	position: absolute;
+	margin:{
+		left: 6.5 * $gridgutter;
+		top : 88.4 * $leading;
+	}
+}
+
+
+#fb{
+	position: absolute;
+	margin: {
+    
+    	left: 7 * $gridgutter;
+		top : 88.4 * $leading;
+	}
+}
+
+
+
+#pinterest{
+	position: absolute;
+	margin: {
+    	left: 7.5 * ($gridgutter); 
+    	top: 88.4  * $leading;	
+	}
+}
+
+#google{
+	position: absolute;
+	margin: {
+    	left: 8 * ($gridgutter); 
+    	top: 88.4  * $leading;	
+	}
+}
+
+
+#linkedin{
+	position: absolute;
+	margin: {
+    	left: 8.5 * ($gridgutter); 
+    	top: 88.4  * $leading;	
+	}
+}
+
+
+
+#yout{
+	position: absolute;
+	margin: {
+    	left: 9 * ($gridgutter); 
+    	top: 88.4  * $leading;	
+	}
+}
+
+
+#containertwo{
+	position: absolute;
+	width : 16 * $gridgutter;
+	height : 5.8 * $leading ;
+	margin:{
+		top: 93  * $leading;	
+	}
+}
+
+#end{
+	position : absolute;
+		margin: {
+    	left: 5.20 * ($gridgutter); 
+    	top: 95.5  * $leading;	
+	}
+
+
+	>li{
+		float: left;
+		padding: {
+			right: 0.5 * $grid-width;
+		}
+
+
+	}
+
+}
+
+
+
+
