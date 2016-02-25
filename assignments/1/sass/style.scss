@@ -38,7 +38,7 @@ p{
 
 .full-width-panel{
    width:   100%;
-   position: realtive;
+   position: relative;
 }
 #header-panel{
    
@@ -150,7 +150,7 @@ font-family: $font-stack-helvetica;
    padding : $title-text-padding;
 }
 .name{
-margin:0 auto;  
+   margin:0 auto;  
    text-align: center;
    padding : $leading/2 0 2*$leading 0;
    font-family: $font-stack-helvetica;
@@ -165,4 +165,35 @@ margin:0 auto;
    background:{
       size: cover;
    }
+}
+.contact-title{
+
+   margin:0 auto;  
+   text-align: center;
+   padding : $title-text-padding;
+   h1{
+      font-size:24px;
+   }
+}
+.contact-body{
+
+   margin:0 auto;  
+   text-align: center;
+   padding-top:0.5*$leading;
+}
+.contact-icons{
+margin:0 auto;  
+   text-align: center;
+   padding:$leading (6*$column-total - $grid-gutter) (2*$leading) (6*$column-total - $grid-gutter);
+   ul{ 
+      li{
+         float:left;
+         text-decoration:none;
+         margin-right:0.8*$grid-gutter/2;   
+      }
+   }
+}
+
+#footer-panel{
+   background-color: $color-gray;
 }
