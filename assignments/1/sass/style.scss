@@ -15,13 +15,15 @@ body{
       color: $color-background;
    }
 
-   font-family: $font-stack-raleway;
+   font-family: $font-stack-helvetica;
    line-height: $leading;
 }
 
 h1 {
-   font-size: 2 * $font-size;   // 32px
+   font-family: $font-stack-raleway;
+   font-size: $font-size-h1;   // 32px
    line-height: 1.2em;
+      font-weight: bold;
 }
 .content{
    max-width : $width-content;
@@ -69,7 +71,24 @@ h1 {
 }
 .phone-image{
    margin-top: -1* 12 * $leading;
+   margin-left:auto;
+   margin-right:auto;
 }
-#features-panel{
+.feature-panel{
+   padding-bottom: 2*$leading;
+}
+.feature-panel-left{
+   padding: 2*$leading $grid-gutter 0 $grid-width;
+}
+.feature-panel-right{
+   padding: 2*$leading $grid-width 0 $grid-gutter;  
+}
+.feature-title{
+font-family: $font-stack-raleway;
 
+
+}
+.feature-description{
+font-family: $font-stack-helvetica;
+   padding-top: 1* $leading;
 }
