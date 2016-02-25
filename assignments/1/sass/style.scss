@@ -14,6 +14,7 @@ body{
    background: {
       color: $color-background;
    }
+   color: $color-dark-gray;
 
    font-family: $font-stack-helvetica;
    line-height: $leading;
@@ -23,7 +24,11 @@ h1 {
    font-family: $font-stack-raleway;
    font-size: $font-size-h1;   // 32px
    line-height: 1.2em;
-      font-weight: bold;
+      font-weight: bolder;
+      color:$color-dark-gray;
+}
+p{
+   color: $color-light-gray;
 }
 .content{
    max-width : $width-content;
@@ -69,6 +74,10 @@ h1 {
    width:$features-column-width;
    position:realtive;
 }
+.phone-image-gutter{
+   text-align: center;
+   padding-bottom: 2*$leading;
+}
 .phone-image{
    margin-top: -1* 12 * $leading;
    margin-left:auto;
@@ -91,4 +100,44 @@ font-family: $font-stack-raleway;
 .feature-description{
 font-family: $font-stack-helvetica;
    padding-top: 1* $leading;
+}
+#video-panel{
+   background-color: $color-gray;
+}
+
+.video-column{
+   float:left;
+   width:$video-column-width;
+   position:realtive;
+}
+.video-panel-left{
+   padding: 2*$leading ($grid-gutter+$grid-width/2) 0 0;
+}
+.video-panel-right{
+   padding: 2*$leading 0 (2.5*$leading) ($grid-gutter+$grid-width);
+
+}
+.video-player{
+   position:relative;
+}
+.play {
+   position:absolute;
+   bottom: $leading;
+   left: $grid-gutter;
+}
+.cursor{
+ position:absolute;
+ bottom:$leading;
+ left:$grid-gutter + 80px;  
+}
+.video-title{
+   margin-bottom: 1* $leading;
+}
+.video-description{
+ margin-bottom: 1* $leading;  
+}
+.video-icons ul li{
+   float:left;
+   text-decoration:none;
+   margin-right:$grid-gutter;
 }
