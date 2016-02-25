@@ -183,7 +183,7 @@ font-family: $font-stack-helvetica;
 }
 .contact-icons{
 margin:0 auto;  
-   text-align: center;
+   
    padding:$leading (6*$column-total - $grid-gutter) (2*$leading) (6*$column-total - $grid-gutter);
    ul{ 
       li{
@@ -196,4 +196,20 @@ margin:0 auto;
 
 #footer-panel{
    background-color: $color-gray;
+}
+.footer-menu{
+   margin:0 auto;  
+   
+   padding:2*$leading (4*$column-total ) (2*$leading) (4*$column-total);
+   ul{ 
+      li{
+         float:left;
+         text-decoration:none;
+         color: $color-light-gray;
+         padding-right:1.7*$grid-gutter;   
+      }
+      li.last{
+         padding-right:0px;
+      }
+   }
 }
