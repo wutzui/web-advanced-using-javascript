@@ -1,0 +1,312 @@
+/*
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,700&subset=latin,latin-ext");
+@import url(https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,600);
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite,
+code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure,
+footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, ins, kbd, label,
+legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, section, samp,
+small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr,
+ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#column-baseline-grid {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3111px;
+}
+
+.all-grids {
+  background-image: url("../img/modular-grid.png"), linear-gradient(90deg, rgba(200, 0, 0, 0.2) 60px, transparent 0px), linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-position: center top, 0% 0%, 0% 0%;
+  background-size: auto auto, 80px 100%, 100% 24px;
+  background-attachment: scroll, fixed, fixed;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-color: transparent, transparent, transparent;
+}
+
+.modular-grid {
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.2) 60px, transparent 0px), linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-size: 80px 100%, 100% 24px;
+}
+
+.column-grid {
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.2) 60px, transparent 0px);
+  background-size: 80px 100%;
+}
+
+.baseline-grid {
+  background-image: linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-size: 100% 24px;
+}
+
+.user-supplied-bg-image {
+  background-image: url("../img/modular-grid.png");
+  background-position: center top;
+  background-size: auto auto;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+body {
+  max-width: 780px;
+}
+
+.large-banner-image {
+  margin: 0 auto;
+  position: absolute;
+  width: 1280px;
+  height: 672px;
+}
+
+.focus-logo {
+  margin: 0 auto;
+  position: absolute;
+  width: 60px;
+  padding-left: 520px;
+  padding-right: 640px;
+  padding-top: 114px;
+}
+
+header h1 {
+  margin: 117.6px auto;
+  position: absolute;
+  padding-left: 600px;
+  font-size: 56px;
+  font-family: "Pacifico", cursive;
+}
+
+header p {
+  margin: 216px auto;
+  position: absolute;
+  padding-left: 380px;
+  font-size: 28px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
+.arrow {
+  margin: 0 auto;
+  position: absolute;
+  width: 42px;
+  padding-left: 608px;
+  padding-right: 640px;
+  padding-top: 318px;
+}
+
+.iphone-image {
+  margin: 0 auto;
+  position: absolute;
+  padding-left: 480px;
+  padding-right: 480px;
+  padding-top: 384px;
+  z-index: 2;
+}
+
+.iphone-image img {
+  width: 300px;
+}
+
+.features_container {
+  margin: 0 auto;
+  position: absolute;
+  padding-left: 160px;
+  padding-right: 160px;
+  padding-top: 720px;
+}
+
+.features_container2 {
+  margin: 0 auto;
+  position: absolute;
+  padding-left: 830px;
+  padding-right: 60px;
+  padding-top: 720px;
+}
+
+.title {
+  font-size: 20.8px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  padding-top: 7.2px;
+  padding-bottom: 19.2px;
+}
+
+.content {
+  font-size: 14.4px;
+  line-height: 24px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  padding-bottom: 43.2px;
+}
+
+.p1_text {
+  margin: 0 auto;
+  position: relative;
+  max-width: 300px;
+}
+
+.p2_text {
+  margin: 0 auto;
+  position: relative;
+  max-width: 300px;
+}
+
+.p3_text {
+  margin: 0 auto;
+  position: relative;
+  max-width: 300px;
+}
+
+.p4_text {
+  margin: 0 auto;
+  position: relative;
+  max-width: 300px;
+}
+
+.get_container {
+  background-color: #e3e3e3;
+  margin: 0 auto;
+  position: relative;
+  width: 1280px;
+  height: 408px;
+  top: 1056px;
+}
+
+.get_texts {
+  margin: 48px auto;
+  position: absolute;
+  width: 560px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.video {
+  margin: 48px auto;
+  float: right;
+  padding-right: 100px;
+}
+
+.op_icons {
+  margin: 216px auto;
+  position: absolute;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.op_icons img {
+  padding-right: 10px;
+}
+
+.quote_container {
+  margin: 48px auto;
+  width: 880px;
+  text-align: center;
+  padding-left: 192px;
+  padding-top: 1056px;
+}
+
+.quote_content {
+  font-size: 20px;
+}
+
+.quote_name {
+  margin: 24px auto;
+  font-size: 12.8px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+span {
+  font-weight: 300;
+}
+
+.people_container {
+  position: relative;
+  top: -12px;
+  width: 1280px;
+}
+
+.one-person {
+  position: absolute;
+  top: 79.68px;
+  left: 914.4px;
+  z-index: 2;
+}
+
+.say_contianer {
+  margin: 0 auto;
+  width: 880px;
+  max-width: 780px;
+  padding-left: 240px;
+  padding-bottom: 48px;
+  text-align: center;
+}
+
+.say_title {
+  margin: 24px auto;
+  font-size: 19.2px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+.social_container img {
+  padding-right: 5px;
+}
+
+footer {
+  margin: 0 auto;
+  position: absolute;
+  background-color: #e3e3e3;
+  text-align: center;
+  width: 1280px;
+  height: 120px;
+}
+
+#footer_nav a {
+  text-decoration: none;
+  color: #939393;
+  font-size: 12px;
+  font-family: "helvetica", "Arial", sans-serif;
+  line-height: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
