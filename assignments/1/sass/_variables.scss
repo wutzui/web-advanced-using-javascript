@@ -12,10 +12,7 @@ $grid-gutter: $grid-width / 3;                                 // 25 pixels
 $color-grid-column: rgba(200, 0, 0, 0.2);
 $color-grid-baseline: rgba(56, 255, 255, 0.8);
 
-// =================================================================================
-// Body sizing.
-// =================================================================================
-$width-body: (9 * ($grid-width + $grid-gutter)) + $grid-width; // 975 pixels
+
 
 // =================================================================================
 // The image `modular-grid.png` on line 18 below is used as a background image by
@@ -31,3 +28,36 @@ $users-comparison-bg-image--size-y: auto;
 $users-comparison-bg-image--attachment: scroll;
 $users-comparison-bg-image--repeat: no-repeat;
 $users-comparison-bg-image--color: transparent;
+
+
+// =================================================================================
+// Color Codes
+// =================================================================================
+$color-white:	#f4f4f4;
+$color-red:		#f00;
+$color-green:	#0f0;
+$color-blue:	#00f;
+$color-gray:	#e3e3e3;
+$color-light-gray: #848484;
+$color-dark-gray: #222222; 
+
+// =================================================================================
+// Colors
+// =================================================================================
+$color-background: $color-gray;
+$color-font-header: $color-dark-gray;
+$color-font-body: $color-light-gray;
+
+// =================================================================================
+// Body sizing.
+// =================================================================================
+$width-body:  (14 * ($grid-width + $grid-gutter) + $grid-width); // 1475
+
+
+// =================================================================================
+// Font
+// =================================================================================
+$font-stack: Arial;
+$font-size-h1: 22px;
+$font-size-heading: 36px;
+
