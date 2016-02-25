@@ -47,8 +47,9 @@ $color-font-body: $color-light-gray;
 // Body sizing.
 // =================================================================================
 $width-body:  1600px;
-$width-content : (14 * ($grid-width + $grid-gutter) + $grid-width); // 1180
-
+$width-content : (15 * ($grid-width + $grid-gutter)  - $grid-gutter); // 1200
+$padding-body : 0 ($grid-gutter/2) 0 ($grid-gutter/2);
+$padding-content : 0 ($grid-gutter/2) 0 ($grid-gutter/2);
 
 // =================================================================================
 // Font
