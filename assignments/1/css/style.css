@@ -1,0 +1,310 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption,
+cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption,
+figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, ins,
+kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby,
+section, samp, small, span, strong, sub, summary, sup, table, tbody, td, tfoot,
+th, thead, time, tr, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#column-baseline-grid {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2412px;
+}
+
+.all-grids {
+  background-image: url("../img/modular-grid.png"), linear-gradient(90deg, rgba(200, 0, 0, 0.2) 75px, transparent 0px), linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-position: center top, 0% 0%, 0% 0%;
+  background-size: auto auto, 100px 100%, 100% 24px;
+  background-attachment: scroll, fixed, fixed;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-color: transparent, transparent, transparent;
+}
+
+.modular-grid {
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.2) 75px, transparent 0px), linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-size: 100px 100%, 100% 24px;
+}
+
+.column-grid {
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.2) 75px, transparent 0px);
+  background-size: 100px 100%;
+}
+
+.baseline-grid {
+  background-image: linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-size: 100% 24px;
+}
+
+.user-supplied-bg-image {
+  background-image: url("../img/modular-grid.png");
+  background-position: center top;
+  background-size: auto auto;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+body {
+  max-width: 975px;
+}
+
+#large-banner {
+  position: absolute;
+  width: 1600px;
+  height: 672px;
+}
+
+#logo {
+  position: absolute;
+  width: 75px;
+  margin-left: 675px;
+  margin-top: 114px;
+}
+
+header h1 {
+  position: absolute;
+  margin-left: 775px;
+  margin-top: 117.6px;
+  font-size: 56px;
+  font-family: "Pacifico", cursive;
+}
+header p {
+  position: absolute;
+  margin-left: 525px;
+  margin-top: 216px;
+  font-size: 32px;
+  font-family: "Raleway", sans-serif;
+}
+
+#arrow {
+  position: absolute;
+  margin-left: 785px;
+  margin-top: 288px;
+}
+
+#feature1 {
+  position: absolute;
+  width: 325px;
+  margin-left: 225px;
+  margin-top: 720px;
+}
+
+#feature2 {
+  position: absolute;
+  width: 325px;
+  margin-left: 1025px;
+  margin-top: 720px;
+}
+
+.bold {
+  padding-bottom: 19.2px;
+  font-size: 24px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.reg {
+  padding-top: 7.2px;
+  padding-bottom: 19.2px;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  color: #848484;
+  text-align: justify;
+  line-height: 24px;
+}
+
+#phone {
+  position: absolute;
+  margin-left: 625px;
+  margin-top: 336px;
+}
+
+#container {
+  position: absolute;
+  width: 1600px;
+  height: 432px;
+  margin-top: 1128px;
+}
+
+#in-container {
+  position: absolute;
+  width: 575px;
+  margin-left: 175px;
+  margin-top: 1176px;
+}
+
+#apple {
+  position: absolute;
+  margin-left: 175px;
+  margin-top: 1344px;
+}
+
+#android {
+  position: absolute;
+  margin-left: 275px;
+  margin-top: 1344px;
+}
+
+#windows {
+  position: absolute;
+  margin-left: 375px;
+  margin-top: 1344px;
+}
+
+#video {
+  position: absolute;
+  margin-left: 850px;
+  margin-top: 1188px;
+}
+
+#play {
+  position: absolute;
+  margin-left: 875px;
+  margin-top: 1440px;
+}
+
+#play-bar {
+  position: absolute;
+  margin-left: 950px;
+  margin-top: 1440px;
+}
+
+#testimonial {
+  position: absolute;
+  margin-left: 375px;
+  margin-top: 1608px;
+  font-size: 24px;
+  font-family: "Raleway", sans-serif;
+}
+
+#blogger-name {
+  position: absolute;
+  margin-left: 675px;
+  margin-top: 1662px;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+}
+#blogger-name > span {
+  font-weight: 600;
+}
+
+#people {
+  position: absolute;
+  width: 1600px;
+  height: 312px;
+  margin-top: 1728px;
+}
+
+#active {
+  position: absolute;
+  width: 79px;
+  height: 78px;
+  margin-left: 915px;
+  margin-top: 1807.2px;
+}
+
+#touch {
+  position: absolute;
+  margin-left: 650px;
+  margin-top: 2088px;
+}
+
+#touch2 {
+  position: absolute;
+  margin-left: 525px;
+  margin-top: 2128.8px;
+}
+
+#twitter {
+  position: absolute;
+  margin-left: 650px;
+  margin-top: 2184px;
+}
+
+#fb {
+  position: absolute;
+  margin-left: 693px;
+  margin-top: 2184px;
+}
+
+#pin {
+  position: absolute;
+  margin-left: 735px;
+  margin-top: 2184px;
+}
+
+#google {
+  position: absolute;
+  margin-left: 777px;
+  margin-top: 2184px;
+}
+
+#link {
+  position: absolute;
+  margin-left: 818px;
+  margin-top: 2184px;
+}
+
+#you {
+  position: absolute;
+  margin-left: 860px;
+  margin-top: 2184px;
+}
+
+#container2 {
+  position: absolute;
+  width: 1600px;
+  height: 138px;
+  margin-top: 2274px;
+}
+
+#footer {
+  position: absolute;
+  margin-left: 500px;
+  margin-top: 2328px;
+}
+#footer > li {
+  list-style: none;
+  float: left;
+  padding-right: 36px;
+}
