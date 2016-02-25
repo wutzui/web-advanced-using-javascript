@@ -8,7 +8,7 @@ html{
 }
 
 body{
-   max-width: $width-body;
+
    margin: 0 auto;
 
    background: {
@@ -25,11 +25,21 @@ h1 {
 }
 .content{
    max-width : $width-content;
-   
+
    margin: 0 auto;
 }
 
 .full-width-panel{
    width:   100%;
    position: realtive;
+}
+#header-panel{
+   
+}
+.banner{
+   height: 700px;
+   background: $header-bg-image no-repeat center fixed;
+   background:{
+      size: cover;
+   }
 }
