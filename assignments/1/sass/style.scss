@@ -50,9 +50,15 @@ h1 {
    padding: $logo-panel-padding;
 }
 .logo{
-
    background: $logo-image no-repeat left center scroll;
    width:$logo-width;
    padding: $logo-text-padding;
    margin:0 auto;
+}
+.banner-title{
+   font-family: $font-stack-raleway;
+   font-size: $font-size-heading;
+   margin:0 auto;  
+   text-align: center;
+   padding : $title-text-padding;
 }

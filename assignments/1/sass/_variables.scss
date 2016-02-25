@@ -58,7 +58,7 @@ $padding-content : 0 ($grid-gutter/2) 0 ($grid-gutter/2);
 $font-size: 16px;                                              // 16 pixels
 $leading: 1.5 * $font-size;                                    // 24 pixels
 $font-stack-pacifico:	'Pacifico', cursive;
-$font-stack-ralwway:	'Raleway', sans-serif;
+$font-stack-raleway:	'Raleway', sans-serif;
 $font-size-h1: 22px;
 $font-size-heading: 36px;
 
@@ -74,3 +74,4 @@ $logo-image-width: 68px;
 
 $logo-text-padding: 0 0 0 ($logo-image-width+$grid-gutter);
 $logo-width: 250px - ($logo-image-width+$grid-gutter);
+$title-text-padding: (2*$leading) 0 0 0;
