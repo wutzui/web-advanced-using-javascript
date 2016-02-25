@@ -114,7 +114,7 @@ font-family: $font-stack-helvetica;
    padding: 2*$leading ($grid-gutter+$grid-width/2) 0 0;
 }
 .video-panel-right{
-   padding: 2*$leading 0 (2.5*$leading) ($grid-gutter+$grid-width);
+   padding: 2*$leading 0 (2*$leading) ($grid-gutter+$grid-width);
 
 }
 .video-player{
@@ -140,4 +140,22 @@ font-family: $font-stack-helvetica;
    float:left;
    text-decoration:none;
    margin-right:$grid-gutter;
+}
+.quote{
+   font-family: $font-stack-raleway;
+   font-size: 24px;
+   line-height:1.8;
+   margin:0 auto;  
+   text-align: center;
+   padding : $title-text-padding;
+}
+.name{
+margin:0 auto;  
+   text-align: center;
+   padding : $leading/2 0 2*$leading 0;
+   font-family: $font-stack-helvetica;
+   font-size: 14px;
+}
+.name span{
+   font-weight: bolder;
 }
