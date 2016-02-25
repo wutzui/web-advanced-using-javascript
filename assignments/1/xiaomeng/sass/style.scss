@@ -1,0 +1,347 @@
+@import 'reset';
+@import 'variables';
+@import 'grid';
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+$font-raleway:'Raleway', sans-serif;
+$font-pacifico: 'Pacifico', cursive;
+
+$text-align: justify;
+$color:#848484;
+
+$grid-and-gutter: $grid-width + $grid-gutter;
+$bg-color:#f4f4f4;
+
+body{
+   max-width: $width-body;
+}
+
+.banner-image{
+   position:absolute;
+   width: 16* $grid-and-gutter;
+   height: 28* $leading;
+}
+
+.focus-icon{
+   position:absolute;
+   width: $grid-width;
+   margin:{
+      left: 6.75* $grid-and-gutter;
+      top: 4.75 * $leading;
+   }
+}
+
+header{
+   h1{
+      position:absolute ;
+      margin:{ 
+         left: 8* $grid-and-gutter;
+         top: 5* $leading;
+      };
+      font-family: $font-pacifico;
+      font-size: 3* $font-size;
+
+   }
+
+   p{
+      position:absolute;
+      margin:{
+         left: 4.5*$grid-and-gutter;
+         top: 10*$leading;
+      };
+      font-size:2*$font-size;
+      font-family: $font-raleway;
+      
+   }
+}
+
+.arrow{
+   position:absolute;
+   margin:{
+      left: 8*$grid-and-gutter;
+      top: 13*$leading;
+
+   }
+}
+
+#iphone-image{
+   display: block;
+   position:absolute;
+   margin: {
+      left: 6.25* $grid-and-gutter;
+      top: 14* $leading;
+   }
+
+}
+
+#iphone-l{
+   position: absolute;
+   width: 4*$grid-and-gutter;
+   margin:{
+      left: 1.8 * $grid-and-gutter;
+      top: 30* $leading;
+   }
+}
+
+.title{
+   padding:{
+      bottom:0.8* $leading;
+   }
+   font:{
+      size: 1.5* $font-size;
+      family: $font-raleway;
+      font-weight: 600;
+   }
+   text-align:  $text-align;
+}
+
+.para{
+   padding:{
+      top: 0.3* $leading;
+      bottom: 0.8 * $leading;
+   }
+   font:{
+      size: $font-size;
+      family: $font-raleway;
+      weight: 300;
+   }
+   color: $color;
+   text-align: $text-align;
+   line-height: $leading;
+}
+
+#iphone-r{
+   position: absolute;
+   width: 4*$grid-and-gutter;
+   margin:{
+      left: 11.2 * $grid-and-gutter;
+      top: 30* $leading;
+   }
+}
+
+#container{
+   display: block;
+   position: absolute;
+   width: 16 *$grid-and-gutter;
+   height: 18*$leading;
+   margin: 0 auto;
+   top: 47* $leading;
+}
+
+#container-init{
+   position: absolute;
+   width:6.75 * $grid-and-gutter;
+   margin:{  
+      left: $grid-and-gutter;
+      top: 50 *$leading;
+  }
+}
+
+#apple{
+   display: block;
+   position: absolute;
+   margin:{
+      left: $grid-and-gutter;
+      top: 59 * $leading;
+   }
+}
+
+#android{
+   display: block;
+   position: absolute;
+   margin:{
+      left: 2* $grid-and-gutter;
+      top: 59 * $leading;
+   }
+}
+
+#windows{
+   display: block;
+   position: absolute;
+   margin:{
+      left: 3* $grid-and-gutter;
+      top: 59 * $leading;
+   }
+}
+
+#video{
+   display: block;
+   position: absolute;
+   margin: {
+      left: 9.5* $grid-and-gutter;
+      top: 50 * $leading;
+   }
+}
+
+#play{
+   display: block;
+   position:absolute;
+   margin: {
+      left: 10 *$grid-and-gutter;
+      top: 60* $leading;
+   }
+}
+
+#play-bar{
+   display: block;
+   position:absolute;
+   margin: {
+      left: 11 *$grid-and-gutter;
+      top: 60* $leading;
+   }
+}
+
+#blockmark{
+   display: block;
+   position: absolute;
+   margin:{
+      left: 3.2 * $grid-and-gutter;
+      top: 67 * $leading;
+   }  
+   font:{
+      size: 1.5 * $font-size;
+      family: $font-raleway;
+   }
+}
+
+#name{
+   display: block;
+   position: absolute;
+   margin:{
+      left: 7.5 * $grid-and-gutter;
+      top: 70 * $leading;
+   }  
+  font:{
+      size: $font-size;
+      family: $font-raleway;
+   }
+   >span{
+      font-weight: 600;
+   }
+}
+
+#people{
+   display: block;
+   position: absolute;
+   width: 16 * $grid-and-gutter; 
+   height: 13 * $leading;
+   margin:{
+      top: 72 * $leading;
+   }
+}
+
+#active{
+   display: block;
+   position: absolute;
+   width: 0.79 * $grid-and-gutter;
+   height: 3.25 * $leading;
+   margin:{
+      left: 9.14 * $grid-and-gutter;;
+      top: 75.3 * $leading;
+   }
+}
+
+#hi{
+   position: absolute;
+   margin:{
+      left: 6.9 * $grid-and-gutter;;
+      top: 87 * $leading;
+   }
+}
+
+#hi-word{
+   position: absolute;
+   margin:{
+      left: 5.25 * $grid-and-gutter;
+      top: 89 * $leading;
+   }
+}
+
+#twitter{
+   display: block;
+   position: absolute;
+   margin:{
+      left: 7 * $grid-and-gutter;
+      top: 91 * $leading;
+   }
+}
+
+#facebook{
+   display: block;
+   position: absolute;
+   margin:{
+      left: 7.5 * $grid-and-gutter;
+      top: 91 * $leading;
+   }
+}
+
+#pinterest{
+   display: block;
+   position: absolute;
+   margin:{
+      left: 8 * $grid-and-gutter;
+      top: 91 * $leading;
+   }
+}
+
+#google{
+   display: block;
+   position: absolute;
+   margin:{
+      left: 8.5 * $grid-and-gutter;
+      top: 91 * $leading;
+   }
+}
+
+#linkedin{
+   display: block;
+   position: absolute;
+   margin:{
+      left: 9 * $grid-and-gutter;
+      top: 91 * $leading;
+   }
+}
+
+#youtube{
+   display: block;
+   position: absolute;
+   margin:{
+      left: 9.5 * $grid-and-gutter;
+      top: 91 * $leading;
+   }
+}
+
+#container2{
+   display: block;
+   position: absolute;
+   width: 16 * $grid-and-gutter; 
+   height: 5.75 * $leading;
+   margin:{
+      top: 95 * $leading;
+   }
+
+}
+
+
+#footer{
+   position: absolute;
+   margin:{
+      left: 5.2 * $grid-and-gutter;
+      top: 97 * $leading;
+   } 
+
+   >li{
+      list-style: none;
+      float: left;
+      padding:{
+         right: 0.48 * $grid-width;
+      }
+   }
+
+}
+
+
+
+
+
+
