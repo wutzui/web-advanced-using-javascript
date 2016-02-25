@@ -37,9 +37,19 @@ h1 {
    
 }
 .banner{
-   height: 700px;
-   background: $header-bg-image no-repeat center fixed;
+   height: $header-height;
+   background: $header-bg-image no-repeat center scroll;
    background:{
       size: cover;
    }
+}
+.logo-panel{
+   font-family: $font-stack-pacifico;
+   font-size: 60px;
+   line-height: $leading*3;
+   padding: $logo-panel-margin;
+}
+.logo{
+   background: $logo-image no-repeat left center scroll;
+   padding: $logo-text-padding;
 }
