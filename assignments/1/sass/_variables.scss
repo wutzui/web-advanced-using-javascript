@@ -40,7 +40,7 @@ $color-dark-gray: #222222;
 // =================================================================================
 // Colors
 // =================================================================================
-$color-background: $color-gray;
+$color-background: $color-white;
 $color-font-header: $color-dark-gray;
 $color-font-body: $color-light-gray;
 
@@ -64,7 +64,7 @@ $font-size-heading: 36px;
 
 
 // =================================================================================
-// Header
+// Header Section
 // =================================================================================
 $header-bg-image: url('../img/large-banner-image.png');
 $header-height: 700px;
@@ -75,3 +75,11 @@ $logo-image-width: 68px;
 $logo-text-padding: 0 0 0 ($logo-image-width+$grid-gutter);
 $logo-width: 250px - ($logo-image-width+$grid-gutter);
 $title-text-padding: (2*$leading) 0 0 0;
+
+// =================================================================================
+// Features Section
+// =================================================================================
+
+$features-column-number: 3;
+$features-column-width: 100%/$features-column-number;
+$phone-image: url('../img/iphone.png');

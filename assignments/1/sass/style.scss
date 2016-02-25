@@ -15,7 +15,7 @@ body{
       color: $color-background;
    }
 
-   font-family: $font-stack-pacifico;
+   font-family: $font-stack-raleway;
    line-height: $leading;
 }
 
@@ -61,4 +61,15 @@ h1 {
    margin:0 auto;  
    text-align: center;
    padding : $title-text-padding;
+}
+.features-column{
+   float:left;
+   width:$features-column-width;
+   position:realtive;
+}
+.phone-image{
+   margin-top: -1* 12 * $leading;
+}
+#features-panel{
+
 }
