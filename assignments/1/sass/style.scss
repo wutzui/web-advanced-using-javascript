@@ -159,3 +159,10 @@ margin:0 auto;
 .name span{
    font-weight: bolder;
 }
+.gallery{
+   height: $gallery-height;
+   background: $gallery-bg-image no-repeat center scroll;
+   background:{
+      size: cover;
+   }
+}
