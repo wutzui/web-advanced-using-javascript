@@ -1,4 +1,5 @@
 @import 'reset';
+@import 'fonts';
 @import 'variables';
 @import 'grid';
 
@@ -9,14 +10,13 @@ html{
    background: {
       color: $color-background;
    }
-
-
 }
 
 body{
-   font: $font-stack;
-   
+   font-family: $font-stack-pacifico;
+   line-height: $leading;
 }
+
 h1 {
    font-size: 2 * $font-size;   // 32px
    line-height: 1.2em;

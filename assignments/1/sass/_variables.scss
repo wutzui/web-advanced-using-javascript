@@ -1,8 +1,3 @@
-// =================================================================================
-// Base font sizing and leading.
-// =================================================================================
-$font-size: 16px;                                              // 16 pixels
-$leading: 1.5 * $font-size;                                    // 24 pixels
 
 // =================================================================================
 // Grid-specific variables.
@@ -57,7 +52,10 @@ $width-body:  (14 * ($grid-width + $grid-gutter) + $grid-width); // 1475
 // =================================================================================
 // Font
 // =================================================================================
-$font-stack: Arial;
+$font-size: 16px;                                              // 16 pixels
+$leading: 1.5 * $font-size;                                    // 24 pixels
+$font-stack-pacifico:	'Pacifico', cursive;
+$font-stack-ralwway:	'Raleway', sans-serif;
 $font-size-h1: 22px;
 $font-size-heading: 36px;
 
