@@ -68,7 +68,9 @@ $font-size-heading: 36px;
 // =================================================================================
 $header-bg-image: url('../img/large-banner-image.png');
 $header-height: 700px;
-$logo-panel-margin: (4*$leading) (6* $column-total ) (1*$leading) (6*$column-total);
+$logo-panel-padding: (4*$leading) 0 (1*$leading) 0;
 $logo-image: url('../img/focus.png');
 $logo-image-width: 68px;
-$logo-text-padding: 0 0 0 ($logo-image-width+2px);
+
+$logo-text-padding: 0 0 0 ($logo-image-width+$grid-gutter);
+$logo-width: 250px - ($logo-image-width+$grid-gutter);

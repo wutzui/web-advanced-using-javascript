@@ -47,9 +47,12 @@ h1 {
    font-family: $font-stack-pacifico;
    font-size: 60px;
    line-height: $leading*3;
-   padding: $logo-panel-margin;
+   padding: $logo-panel-padding;
 }
 .logo{
+
    background: $logo-image no-repeat left center scroll;
+   width:$logo-width;
    padding: $logo-text-padding;
+   margin:0 auto;
 }
