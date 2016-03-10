@@ -1,45 +1,14 @@
-# Assignment 1
+# Assignment_1//web_advanced//Nima_Behravan
 
-This project is designed to re-familiarize you with CSS and HTML, and to have you practice Sass, Git, and the comp-to-HTML process using a grid.
 
-## Description
+## Project
+Here is the code for the first project of web development using Sass.
 
-You will create a transfer of [this Photoshop PSD](http://www.bestpsdfreebies.com/freebie/focus-psd-theme/), created by Michael Reimer at [`bestpsdfreebies.com`](www.bestpsdfreebies.com), into a web page. (The **Download** link is in the lower left corner of the main image.) The starter CSS, fonts, and assets you’ll need are discussed below.
 
-## Base CSS
+## Credits
 
-Eric Meyer’s base/reset CSS (`_reset.scss`) is provided in the `css` folder of this project. Import it into your project at the base level, before any other CSS.
+The `_reset.scss` file (modified somewhat) is culled from Eric Meyer’s reset document, found at [`http://meyerweb.com/eric/tools/css/reset/`](http://meyerweb.com/eric/tools/css/reset/). The simple grid syntax in `_grid.scss` is a modification of CodePen user Arvin Quilao’s [example](http://codepen.io/arvinquilao/pen/IbwaA), which, in turn, is derived from GitHub user MikeAM’s [Gist example](https://gist.github.com/MikeAM/5171527#file-baseline-grid-css).
 
-## Fonts
+The font used in this example is [Open Sans](https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans), licensed under the [SIF OFL](http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web).
 
-You’ll need the regular version of the `Pacifico` font and the light, regular, and semibold versions of the `Raleway` font. Link to these fonts externally; do not download these into your project.
-
-**Pacifico**: [`https://www.google.com/fonts/specimen/Pacifico`](https://www.google.com/fonts/specimen/Pacifico)
-
-**Raleway**: [`https://www.google.com/fonts/specimen/Raleway`](https://www.google.com/fonts/specimen/Raleway)
-
-## Grid
-
-You will also need [this web grid](https://github.com/code-warrior/column-baseline-grid) in order to transfer the page accurately.
-
-## Assets
-
-You will need Photoshop in order to extract the many assets in the PSD file. However, since it doesn’t make sense for every student to extract the same amount of assets, creating eighteen copies of each file, this process will be divided among all the students in the class.
-
-In essence, you’ll be using your own GitHub account to fork the `assignments` repository, then issue a pull request to add your images to the repository. Because every student will be subscribed to this repo, changes to it will notify users to update their own copies of the repo. This is the gist of the process. We’ll elaborate during the first class.
-
-## Revision Control
-
-You will do all of your development under the control of Git using GitHub.
-
-## Branches
-
-There are just two branches at the moment: `master`, `dev`, and `assets`.
-
-### Git Branching Model
-
-`web-advanced-using-javascript/assignments/1/YOUR_PARSONS_USER_ID`
-
-## Due
-
-This assignment is due via GitHub by 11:59 PM on Wednesday, 24 February 2016. We’ll discuss the submission protocol in class.
+Ipsum context extracted from [Vegan Ipsum](http://bengreen.org.uk/veganipsum/), [Veggie Ipsum](http://veggieipsum.com/), and [Pet Lover Lorem Ipsum](http://eneemenee.com/).
