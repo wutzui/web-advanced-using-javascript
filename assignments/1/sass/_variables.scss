@@ -1,0 +1,62 @@
+
+// =================================================================================
+// Grid-specific variables.
+// =================================================================================
+$grid-width: 60px;                                             // 60 pixels
+$grid-gutter: $grid-width / 3;                                 // 20 pixels
+$color-grid-column: rgba(200, 0, 0, 0.2);
+$color-grid-baseline: rgba(56, 255, 255, 0.8);
+
+
+
+// =================================================================================
+// The image `modular-grid.png` on line 18 below is used as a background image by
+// the file `index.html`. It should be updated by the user in order to compare it to
+// the background grid defined at the top of this document.
+// =================================================================================
+$users-comparison-bg-image: url('../img/modular-grid.png');
+$users-comparison-bg-image--height: 3111px;
+$users-comparison-bg-image--position-x: center;
+$users-comparison-bg-image--position-y: top;
+$users-comparison-bg-image--size-x: auto;
+$users-comparison-bg-image--size-y: auto;
+$users-comparison-bg-image--attachment: scroll;
+$users-comparison-bg-image--repeat: no-repeat;
+$users-comparison-bg-image--color: transparent;
+
+
+// =================================================================================
+// Color Codes
+// =================================================================================
+$color-white:	#f4f4f4;
+$color-red:		#f00;
+$color-green:	#0f0;
+$color-blue:	#00f;
+$color-gray:	#e3e3e3;
+$color-light-gray: #848484;
+$color-dark-gray: #222222; 
+
+// =================================================================================
+// Colors
+// =================================================================================
+$color-background: $color-gray;
+$color-font-header: $color-dark-gray;
+$color-font-body: $color-light-gray;
+
+// =================================================================================
+// Body sizing.
+// =================================================================================
+$width-body:  1600px;
+$width-content : (14 * ($grid-width + $grid-gutter) + $grid-width); // 1180
+
+
+// =================================================================================
+// Font
+// =================================================================================
+$font-size: 16px;                                              // 16 pixels
+$leading: 1.5 * $font-size;                                    // 24 pixels
+$font-stack-pacifico:	'Pacifico', cursive;
+$font-stack-ralwway:	'Raleway', sans-serif;
+$font-size-h1: 22px;
+$font-size-heading: 36px;
+
