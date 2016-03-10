@@ -10,6 +10,7 @@ $raleway: 'Raleway', sans-serif;
 
 $font-stack: 'helvetica', 'Arial', sans-serif;
 $bg-color: #e3e3e3;
+$content-color: #939393;
 
 // =================================================================================
 // header
@@ -38,12 +39,12 @@ body {
 }
 
 header h1 {
-   margin: (4.9 * $leading) auto;  
+   margin: (4.9 * $leading) auto;
    position: absolute;
    padding: {
       left: (7.5 * ($grid-width + $grid-gutter));
    }
-   font-size: 3.5 * $font-size;   
+   font-size: 3.5 * $font-size;
    font-family: $pacifico;
 }
 
@@ -53,7 +54,7 @@ header p {
    padding: {
       left: (4.75 * ($grid-width + $grid-gutter));
    }
-   font-size: 1.75 * $font-size; 
+   font-size: 1.75 * $font-size;
    font-family: $raleway;
    font-weight: 300;
 }
@@ -71,7 +72,7 @@ header p {
 
 
 // =================================================================================
-// iphone 
+// iphone
 // =================================================================================
 
 .iphone-image {
@@ -90,7 +91,7 @@ header p {
 }
 
 // =================================================================================
-// features 
+// features
 // =================================================================================
 
 .features_container {
@@ -100,7 +101,7 @@ header p {
       left: 2 * ($grid-width + $grid-gutter);
       right: 2 * ($grid-width + $grid-gutter);
       top: (30 * $leading);
-   }   
+   }
 }
 
 .features_container2 {
@@ -110,7 +111,7 @@ header p {
       left: (13.5* $grid-width + $grid-gutter);
       right: $grid-width;
       top: (30 * $leading);
-   }   
+   }
 }
 
 .title {
@@ -119,8 +120,8 @@ header p {
    font-weight: 600;
    padding: {
       top: (0.3 * $leading);
-      bottom: (0.8 * $leading); 
-   }   
+      bottom: (0.8 * $leading);
+   }
 }
 
 .content {
@@ -159,7 +160,7 @@ header p {
 
 
 // =================================================================================
-// get 
+// get
 // =================================================================================
 
 .get_container {
@@ -178,7 +179,7 @@ header p {
    padding: {
       left: 1 * ($grid-width + $grid-gutter);
       right: 1 * ($grid-width + $grid-gutter);
-   }      
+   }
 }
 
 //// video ////
@@ -193,11 +194,11 @@ header p {
 //// operation system icons ////
 .op_icons {
    margin: (9 * $leading) auto;
-   position: absolute;  
+   position: absolute;
    padding: {
       left: 1 * ($grid-width + $grid-gutter);
       right: 1 * ($grid-width + $grid-gutter);
-   }        
+   }
 }
 
 .op_icons img {
@@ -217,7 +218,7 @@ header p {
    padding: {
       left: 2.4 * ($grid-width + $grid-gutter);
       top: 44 * $leading;
-   }      
+   }
 }
 
 .quote_content {
@@ -257,7 +258,7 @@ span {
 // say
 // =================================================================================
 
-.say_contianer {   
+.say_contianer {
    margin: 0 auto;
    width: 11 * ($grid-width + $grid-gutter);
    max-width: $width-body;
@@ -298,7 +299,7 @@ footer {
 
 #footer_nav a {
    text-decoration: none;
-   color: #939393;
+   color: $content-color;
    font-size: 0.75 * $font-size;
    font-family: $font-stack;
    line-height: 5 * $leading;
