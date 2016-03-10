@@ -1,0 +1,314 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+#column-baseline-grid {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3111px;
+}
+
+.all-grids {
+  background-image: url("../img/modular-grid.png"), linear-gradient(90deg, rgba(200, 0, 0, 0.2) 75px, transparent 0px), linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-position: center top, 0% 0%, 0% 0%;
+  background-size: auto auto, 100px 100%, 100% 24px;
+  background-attachment: scroll, fixed, fixed;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-color: transparent, transparent, transparent;
+}
+
+.modular-grid {
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.2) 75px, transparent 0px), linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-size: 100px 100%, 100% 24px;
+}
+
+.column-grid {
+  background-image: linear-gradient(90deg, rgba(200, 0, 0, 0.2) 75px, transparent 0px);
+  background-size: 100px 100%;
+}
+
+.baseline-grid {
+  background-image: linear-gradient(0deg, transparent 95%, rgba(56, 255, 255, 0.8) 100%);
+  background-size: 100% 24px;
+}
+
+.user-supplied-bg-image {
+  background-image: url("../img/modular-grid.png");
+  background-position: center top;
+  background-size: auto auto;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption,
+cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption,
+figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, ins,
+kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby,
+section, samp, small, span, strong, sub, summary, sup, table, tbody, td, tfoot,
+th, thead, time, tr, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, menu, nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  max-width: 975px;
+}
+
+.header-image {
+  position: absolute;
+  width: 1600px;
+  height: 624px;
+}
+
+#focus {
+  position: absolute;
+  width: 75px;
+  margin-left: 675px;
+  margin-top: 114px;
+}
+
+header h1 {
+  position: absolute;
+  margin-left: 750px;
+  margin-top: 117.6px;
+  font-size: 57.6px;
+  font-family: "Pacifico", cursive;
+}
+header p {
+  position: absolute;
+  margin-left: 500px;
+  margin-top: 216px;
+  font-size: 32px;
+  font-family: "Raleway", sans-serif;
+}
+
+#iphone {
+  position: absolute;
+  padding-left: 600px;
+  padding-top: 312px;
+}
+
+#featureONE {
+  position: absolute;
+  width: 275px;
+  margin-left: 275px;
+  margin-top: 648px;
+}
+
+#featureTWO {
+  position: absolute;
+  width: 275px;
+  margin-left: 1000px;
+  margin-top: 648px;
+}
+
+.title {
+  font-size: 20.8px;
+  line-height: 24px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  padding-top: 6px;
+  padding-bottom: 19.2px;
+}
+
+.text {
+  font-size: 14.4px;
+  line-height: 24px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  padding-bottom: 42.72px;
+  text-align: justify;
+}
+
+#container {
+  position: absolute;
+  width: 1800px;
+  height: 432px;
+  margin-top: 1080px;
+}
+
+#get {
+  position: absolute;
+  width: 500px;
+  margin-left: 150px;
+  margin-top: 1128px;
+}
+
+#video {
+  position: absolute;
+  margin-left: 800px;
+  margin-top: 1140px;
+}
+
+#playbar {
+  position: absolute;
+  margin-left: 900px;
+  margin-top: 1392px;
+}
+
+#play {
+  position: absolute;
+  margin-left: 815px;
+  margin-top: 1392px;
+}
+
+#icon1 {
+  position: absolute;
+  margin-left: 150px;
+  margin-top: 1296px;
+}
+
+#icon2 {
+  position: absolute;
+  margin-left: 250px;
+  margin-top: 1296px;
+}
+
+#icon3 {
+  position: absolute;
+  margin-left: 350px;
+  margin-top: 1296px;
+}
+
+#comment {
+  position: absolute;
+  margin-left: 350px;
+  margin-top: 1560px;
+  font-size: 24px;
+  font-family: "Raleway", sans-serif;
+}
+
+#guy {
+  position: absolute;
+  margin-left: 700px;
+  margin-top: 1608px;
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+#blogger {
+  position: absolute;
+  margin-left: 770px;
+  margin-top: 1608px;
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+}
+
+#people {
+  position: absolute;
+  width: 1600px;
+  height: 312px;
+  margin-top: 1680px;
+}
+
+#activeperson {
+  position: absolute;
+  width: 79px;
+  height: 78px;
+  margin-left: 915px;
+  margin-top: 1759.2px;
+}
+
+.hi {
+  position: absolute;
+  margin-left: 700px;
+  margin-top: 2064px;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+.lore {
+  position: absolute;
+  margin-left: 600px;
+  margin-top: 2088px;
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
+#twit {
+  position: absolute;
+  margin-left: 650px;
+  margin-top: 2121.6px;
+}
+
+#fb {
+  position: absolute;
+  margin-left: 700px;
+  margin-top: 2121.6px;
+}
+
+#pinterest {
+  position: absolute;
+  margin-left: 750px;
+  margin-top: 2121.6px;
+}
+
+#google {
+  position: absolute;
+  margin-left: 800px;
+  margin-top: 2121.6px;
+}
+
+#linkedin {
+  position: absolute;
+  margin-left: 850px;
+  margin-top: 2121.6px;
+}
+
+#yout {
+  position: absolute;
+  margin-left: 900px;
+  margin-top: 2121.6px;
+}
+
+#containertwo {
+  position: absolute;
+  width: 1600px;
+  height: 139.2px;
+  margin-top: 2232px;
+}
+
+#end {
+  position: absolute;
+  margin-left: 520px;
+  margin-top: 2292px;
+}
+#end > li {
+  float: left;
+  padding-right: 37.5px;
+}
