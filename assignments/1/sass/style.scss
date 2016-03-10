@@ -1,1 +1,236 @@
+@import 'variables';
+@import 'grid';
 @import 'reset';
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,600);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+$grid-and-gutter: $grid-width + $grid-gutter;
+
+$bg-color: #f4f4f4;
+
+$focus-font: 'Pacifico', cursive;
+$font:'Raleway', sans-serif;
+
+body{
+	font-family: $font + $focus-font;
+	max-width: 15 * $grid-and-gutter;
+	margin: 0 auto;
+	background: $bg-color;
+
+
+	header{
+		#large-banner-image{
+			position: absolute;
+			width: 16 * $grid-and-gutter;
+			height: 28 * $leading;
+			opacity: 0.4;
+		}
+		#focusLogo{	
+			font:{
+				family: $focus-font;
+				size: 3.5 * $font-size;
+			}
+			margin:{
+				top: 5 * $leading;
+				left: 6 * $grid-and-gutter;
+			
+			}
+			img{
+				float: left;
+			}
+			p{	
+				float: left;
+				margin-left: $grid-gutter;
+
+			}
+			height: 7 * $leading;
+			position: absolute;
+		}
+	
+		h1{
+			font: {
+				family: $font;
+				weight: 300;
+				size: 2.25 * $font-size;
+			}
+			position: absolute;
+			text-align: center;
+			
+			margin:{
+				top: 10 * $leading;
+				left: 4 * $grid-and-gutter;
+			}		
+		}
+		
+		#arrow{
+			position: absolute;
+			margin:{
+				top: 13.75 * $leading;
+				left: 6.95 * $grid-and-gutter
+			}
+		}
+	}//end of header 
+
+	#phone{
+		position: absolute;
+		z-index: 100;
+
+		margin:{
+			left: 5.45 * $grid-and-gutter;
+			top: 16.5 * $leading;
+		}
+	}
+	.b{
+		font-weight: 600;
+		padding-bottom: $leading;
+		font-size: 22px;
+	}
+
+	.r{
+		font-size: 16px;
+	}
+	p{
+			line-height: $leading;
+		}
+	#feature-left{
+		position: absolute;
+		margin-top: 3px;
+		left: 2.6 * $grid-width;
+		top: 31 * $leading;
+		
+		#fLeftBottom{
+			padding-top: 2* $leading;
+		}
+	}
+
+	#feature-right{
+		position: absolute;
+		margin-top: 3px;
+		right: 2.6 * $grid-width;
+		top: 31 * $leading;
+		
+		#fRightBottom{
+			padding-top: 2 * $leading;
+		}
+	}
+	#container{
+		position: absolute;
+		left: 0;
+		top: 50 * $leading;
+	
+		#GetTheAppText{
+			position: absolute;
+			top: 2 * $leading;
+			left: $grid-gutter;
+			z-index: 100;
+		}
+
+		#socialIconContainer{
+			position: absolute;
+			top: 9* $leading;
+			left: $grid-gutter;
+			img {
+				padding-right: $leading;
+			}
+		}
+		
+		
+		#video-image{
+				position: absolute;
+				top: 2.5 * $leading;
+				left: 8 * $grid-and-gutter + 0.5 * $grid-gutter;
+			}	
+	
+			#playButton{
+				position: absolute;
+				z-index: 100;
+				margin:{
+					left: 8.2 * $grid-and-gutter;
+					top: - 5* $leading;
+				}
+			}
+
+			#vid-bar{
+				position: absolute;
+				margin:{
+					left: 9.2 * $grid-and-gutter;
+					top: - 5* $leading;
+				}
+
+			}
+		}
+		
+		#testimonials{
+				font-family: $font;
+				font-size: 24px;
+				position: absolute;
+				top: 70 * $leading;
+				left: 3 * $grid-and-gutter + 0.5 * $grid-gutter;
+		}
+
+		#KyleTurner{
+			position: absolute;
+			top: 72 * $leading;
+			left: 6 * $grid-and-gutter + 0.7 * $grid-gutter;			
+			font-size: 14px;
+			span{
+			font-weight: bold;
+			}
+		}
+
+		#people{
+			width: 100%;
+			position: absolute;
+			top: 75 * $leading;
+			left: 0;
+		}
+
+		#active-person{
+			position: absolute;
+			margin-left: 8.25 * $grid-and-gutter;
+			margin-top: 78 * $leading;
+			width: 0.71 * $grid-and-gutter;
+		}
+		#contact{
+			position: absolute;
+			margin-left: 6 * $grid-and-gutter;
+			margin-top: 89 * $leading;
+		}
+
+		#contact-text{
+			position: absolute;
+			margin-left: 4.6 * $grid-and-gutter;
+			margin-top: 92 * $leading;
+		}
+
+		#social{
+			position: absolute;
+			margin-left: 6 * $grid-and-gutter;
+			padding-top: 94* $leading;
+
+		}
+
+		#footer{
+			position: absolute;
+			padding: {
+				left: 4.5 * $grid-and-gutter;
+				top: 101 * $leading; 
+			}
+
+			width: 7 * $grid-width + 7 * $grid-and-gutter;
+			height: 4 * $leading;
+		}
+		
+		#footerContainer{
+			width: 100%;
+			height: 7* $leading;
+			margin-top: 98 * $leading;
+			position: absolute;
+		}
+		ul#footer li {
+			display: inline;
+			padding: 10px;
+		}
+}
+
+
