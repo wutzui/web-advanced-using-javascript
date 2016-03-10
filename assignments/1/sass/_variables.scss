@@ -4,9 +4,9 @@
 // =================================================================================
 $grid-width: 60px;                                             // 60 pixels
 $grid-gutter: $grid-width / 3;                                 // 20 pixels
+$column-total : $grid-width + $grid-gutter;
 $color-grid-column: rgba(200, 0, 0, 0.2);
 $color-grid-baseline: rgba(56, 255, 255, 0.8);
-
 
 
 // =================================================================================
@@ -15,7 +15,7 @@ $color-grid-baseline: rgba(56, 255, 255, 0.8);
 // the background grid defined at the top of this document.
 // =================================================================================
 $users-comparison-bg-image: url('../img/modular-grid.png');
-$users-comparison-bg-image--height: 3111px;
+$users-comparison-bg-image--height: auto;
 $users-comparison-bg-image--position-x: center;
 $users-comparison-bg-image--position-y: top;
 $users-comparison-bg-image--size-x: auto;
@@ -39,7 +39,7 @@ $color-dark-gray: #222222;
 // =================================================================================
 // Colors
 // =================================================================================
-$color-background: $color-gray;
+$color-background: $color-white;
 $color-font-header: $color-dark-gray;
 $color-font-body: $color-light-gray;
 
@@ -47,8 +47,9 @@ $color-font-body: $color-light-gray;
 // Body sizing.
 // =================================================================================
 $width-body:  1600px;
-$width-content : (14 * ($grid-width + $grid-gutter) + $grid-width); // 1180
-
+$width-content : (15 * ($column-total)  - $grid-gutter); // 1180
+$padding-body : 0 ($grid-gutter/2) 0 ($grid-gutter/2);
+$padding-content : 0 ($grid-gutter/2) 0 ($grid-gutter/2);
 
 // =================================================================================
 // Font
@@ -56,7 +57,43 @@ $width-content : (14 * ($grid-width + $grid-gutter) + $grid-width); // 1180
 $font-size: 16px;                                              // 16 pixels
 $leading: 1.5 * $font-size;                                    // 24 pixels
 $font-stack-pacifico:	'Pacifico', cursive;
-$font-stack-ralwway:	'Raleway', sans-serif;
+$font-stack-raleway:	'Raleway', sans-serif;
+$font-stack-helvetica: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-size-h1: 22px;
 $font-size-heading: 36px;
 
+
+// =================================================================================
+// Header Section
+// =================================================================================
+$header-bg-image: url('../img/large-banner-image.png');
+$header-height: 700px;
+$logo-panel-padding: (4*$leading) 0 (1*$leading) 0;
+$logo-image: url('../img/focus.png');
+$logo-image-width: 68px;
+
+$logo-text-padding: 0 0 0 ($logo-image-width+$grid-gutter);
+$logo-width: 250px - ($logo-image-width+$grid-gutter);
+$title-text-padding: (2*$leading) 0 0 0;
+
+// =================================================================================
+// Features Section
+// =================================================================================
+
+$features-column-number: 3;
+$features-column-width: 100%/$features-column-number;
+$phone-image: url('../img/iphone.png');
+
+// =================================================================================
+// Video Section
+// =================================================================================
+
+$video-column-number: 2;
+$video-column-width: 100%/$video-column-number;
+
+// =================================================================================
+// Gallery Section
+// =================================================================================
+$gallery-bg-image: url('../img/people.png');
+
+$gallery-height: 318px;
