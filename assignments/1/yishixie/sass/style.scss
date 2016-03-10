@@ -1,0 +1,229 @@
+// sass \
+//--unix-newlines \
+//--style expanded \
+//--watch sass/style.scss:css/style.css
+
+@import 'reset';
+@import 'variables';
+
+
+body{
+	background-color: #f4f4f4;
+	#background-set{
+
+		// resizable background images with their media query at the width of the content div body
+		#large-banner-image{
+			position: absolute;
+			top:0px;
+			width: 100vw;
+			z-index: -1;
+			@media screen and (max-width: $width-body) {
+				position: absolute;
+				top:0px;
+				width: $width-body;
+			}
+		}
+
+		#container-image{
+			position: absolute;
+			width: 100vw;
+			top: 48 * $leading;
+			z-index: -1;
+			@media screen and (max-width: $width-body) {
+				position: absolute;
+				top: 48 * $leading;
+				width: $width-body;
+			}
+		}
+
+		#people-image{
+			position: absolute;
+			top: 72 * $leading;
+			width: 100vw;
+			z-index: -1;
+			@media screen and (max-width: $width-body) {
+				position: absolute;
+				top: 72 * $leading;
+				width: $width-body;
+			}
+		}
+		#footer-container-image{
+			position: absolute;
+			top: 94 * $leading;
+			width: 100vw;
+			z-index: -1;
+			@media screen and (max-width: $width-body) {
+				position: absolute;
+				top: 94 * $leading;
+				width: $width-body;
+			}
+		}
+	}
+
+
+	#container {
+		margin: 0 auto;
+		max-width : $width-body;
+// header
+		#focus{
+			position: absolute;
+			float: left;
+			padding-left: 6 * $column-and-gutter;
+			padding-top: 4.6 * $leading;
+		}
+		#titleFont{
+			position: absolute;
+			padding-left: 7 * $column-and-gutter;
+			padding-top: 4 * $leading;
+			font-family: $font1;
+			font-size: (2.3 * $leading);
+		}
+		#blurb{
+			position: absolute;
+			font-family: $font2;
+			font-size: 1.2*$leading;
+			padding-top: 9.5 * $leading;
+			padding-left: 4 * $column-and-gutter;
+		}
+		#arrow{
+			position: absolute;
+			padding-top: 13 * $leading;
+			padding-left: 7 * $column-and-gutter;
+		}
+
+		#iphone{
+			position: absolute;
+			padding-top: 16 * $leading;
+			padding-left: 5* $column-and-gutter;
+		}
+
+
+// four text fields grouped
+		#text-left{
+			position: absolute;
+			float: left;
+			width: 4 * $column-and-gutter;
+			top: 30 * $leading;
+			padding-left: 1 * $column;
+		}
+		
+		#text-right{
+			position: absolute;
+			float: right;
+			top: 30 * $leading;
+			width: 4 * $column-and-gutter;
+			padding-left: 10 * $column-and-gutter + $gutter;
+		}
+		
+		#text-left-two{
+			position: absolute;
+			float: left;
+			width: 4 * $column-and-gutter;
+			top: 37 * $leading;
+			padding-left: 1 * $column;
+		}
+		
+		#text-right-two{
+			position: absolute;
+			float: right;
+			top: 37 * $leading;
+			width: 4 * $column-and-gutter;
+			padding-left: 10 * $column-and-gutter + $gutter;
+		}
+
+		#text-left-three{
+			position: absolute;
+			float: left;
+			width: 6 * $column-and-gutter + $column;
+			top: 50 * $leading;
+		}
+
+
+		#logo1{
+			position: absolute;
+			float: left;
+			top: 57 * $leading;
+		}
+		#logo2{
+			position: absolute;
+			float: left;
+			padding-left:$column-and-gutter ;
+			top: 57 * $leading;
+		}
+		#logo3{
+			position: absolute;
+			float: left;
+			padding-left:2 * $column-and-gutter ;
+			top: 57 * $leading;
+		}
+
+
+// video image set
+		#video1{
+			position: absolute;
+			top:  50 * $leading;
+			padding-left: 9 * $column-and-gutter - $gutter;
+		}
+		#video2{
+			position: absolute;
+			top:  60 * $leading;
+			padding-left: 9 * $column-and-gutter  ;
+		}
+		#video3{
+			position: absolute;
+			top:  60 * $leading;
+			padding-left: 10 * $column-and-gutter ;
+
+		}
+
+
+		#slogan1{
+			position: absolute;
+			top:  67 * $leading;
+			padding-left: 2 * $column-and-gutter + $gutter;
+			font-size: 1.4* $font-size;
+		}
+
+		#slogan2{
+			position: absolute;
+			top:  69 * $leading;
+			padding-left: 6 * $column-and-gutter + $gutter;
+			font-size: 0.8* $font-size;
+		}
+
+		#slogan3{
+			position: absolute;
+			top:  86 * $leading;
+			padding-left: 6 * $column-and-gutter;
+		}
+
+		#slogan4{
+			position: absolute;
+			top:  88 * $leading;
+			padding-left: 4 * $column-and-gutter + $column;
+			font-size: 0.8* $font-size;
+		}
+
+
+// footer
+		#small-logo{
+			position: absolute;
+			top: 90 * $leading;
+			text-align: center;
+			padding-left: 6 * $column-and-gutter - $gutter; 
+		}
+		
+		#footer-link{
+			position: absolute;
+			top: 96 * $leading;
+			text-align: center;
+			padding-left: 4 * $column-and-gutter + $gutter; 
+			font-size: 0.8* $font-size;
+			a{
+				text-decoration: none;
+				color: black;
+				padding-right:2rem; 
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+$font-size: 16px;                                  // 16 pixels
+$leading: 1.6 * $font-size;                        // 25.6 pixels
+$column: 60px;					                   // 60 pixels
+$gutter: $column / 3;			                   // 20 pixels
+$column-and-gutter : $column + $gutter;            // 80 pixels
+$width-body: (15 * $column-and-gutter); //  pixels
+
+
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,600);
+
+ $font1: 'Pacifico'; 
+ $font2: 'Raleway';
