@@ -7,6 +7,8 @@ window.onload = function () {
     var firstModalBtn = document.querySelector ('#js-triggers li:nth-of-type(2)');
 
 
+
+
     //set the append modal.
     var firstModal = document.createElement ('div');
     firstModal.id = 'first-modal';
@@ -20,7 +22,6 @@ window.onload = function () {
     firstModal.appendChild(firstModalContent);
     firstModalContent.textContent = 'I am the modal!!!';
 
-
     function openFirstModal() {
         firstModal.style.display ='block';     
     }
@@ -30,8 +31,17 @@ window.onload = function () {
         firstModal.style.display ='none';   
     }
 
+    function escClose(event) {
+        var x = event.keyCode;
+        if (x == 27) {  // 27 is the ESC key
+            xClose();
+        }
+    }
+
+
     // call the toggleModal function.
     firstModalBtn.addEventListener ('click', openFirstModal, false);
+    body.addEventListener ('keydown', escClose, false);  
     firstModal.addEventListener ('click', xClose, false);    
 
     /******************************************************************************/
