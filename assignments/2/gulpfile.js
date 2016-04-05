@@ -19,22 +19,32 @@ var gulp                           = require('gulp'),
     reload                         = browserSync.reload,
 
     // Folder name variables
-    devSourceFolder  = 'dev',
-    devTargetFolder  = 'temp',
-    prodTargetFolder = 'prod',
-    HTMLSourceFolder = 'html',
-    JSFolder         = 'scripts',
-    imagesFolder     = 'img',
-    sassCSSFolder    = 'styles',
+    devSourceFolder                = 'dev',
+    devTargetFolder                = 'temp',
+    prodTargetFolder               = 'prod',
+    HTMLSourceFolder               = 'html',
+    JSFolder                       = 'scripts',
+    imagesFolder                   = 'img',
+    sassCSSFolder                  = 'styles',
 
     // Filenames and paths
-    JSTargetFilename = 'main.js',
-    preConcatenatedJSFiles = devSourceFolder + '/' + JSFolder + '/*.js',
+    JSTargetFilename               = 'app.js',
+
+    preCompiledJSFilesWithGrid    = devSourceFolder + '/' + JSFolder + '/*.js',
+    preCompiledJSFilesWithoutGrid = [
+        devSourceFolder + '/' + JSFolder + '/*.js',
+        '!' + devSourceFolder + '/' + JSFolder + '/grid.js'
+    ],
+
     HTMLFiles = [
         devSourceFolder + '/' + HTMLSourceFolder + '/*.html',
         devSourceFolder + '/' + HTMLSourceFolder + '/**/*.html'
     ],
-    sassMainFile = devSourceFolder  + '/' + sassCSSFolder + '/main.scss',
+
+    sassSourceFileForDev     = devSourceFolder  + '/' + sassCSSFolder +
+                                   '/00-main-dev/main.scss',
+    sassSourceFileForProd    = devSourceFolder + '/' + sassCSSFolder +
+                                   '/00-main-prod/main.scss',
 
     // Folder paths
     expendableFolders        = [devTargetFolder, prodTargetFolder],
@@ -79,14 +89,14 @@ gulp.task('compressHTML', function() {
 /**
  * COMPILE CSS FOR DEVELOPMENT WORK
  *
- * This task looks for a single Sass file (sassMainFile), compiles the CSS from it,
- * and writes the resulting file to the cssDevDestinationFolder. The final CSS file
- * will be formatted with 2-space indentations. Any floating-point calculations will
- * be carried out 10 places, and browser-specific prefixes will be added to support 2
- * browser versions behind all current browsers’ versions.
+ * This task looks for a single Sass file (sassSourceFileForDev), compiles the CSS
+ * from it, and writes the resulting file to the cssDevDestinationFolder. The final
+ * CSS file will be formatted with 2-space indentations. Any floating-point
+ * calculations will be carried out 10 places, and browser-specific prefixes will be
+ * added to support 2 browser versions behind all current browsers’ versions.
  */
 gulp.task('compileCSSForDev', function () {
-    return gulp.src(sassMainFile)
+    return gulp.src(sassSourceFileForDev)
         .pipe(sass({
             outputStyle: 'expanded',
             precision: 10
@@ -100,15 +110,15 @@ gulp.task('compileCSSForDev', function () {
 /**
  * COMPILE CSS FOR PRODUCTION
  *
- * This task looks for a single Sass file (sassMainFile), compiles the CSS from it,
- * and writes the resulting single CSS file to the cssProdDestinationFolder. Any
- * floating-point calculations will be carried out 10 places, and browser-specific
- * prefixes will be added to support 2 browser versions behind all current browsers’
- * versions. Lastly, the final CSS file is passed through two levels of compression:
- * “outputStyle” from Sass and compressCSS().
+ * This task looks for a single Sass file (sassSourceFileForProd), compiles the CSS
+ * from it, and writes the resulting single CSS file to the cssProdDestinationFolder.
+ * Any floating-point calculations will be carried out 10 places, and
+ * browser-specific prefixes will be added to support 2 browser versions behind all
+ * current browsers’ versions. Lastly, the final CSS file is passed through two
+ * levels of compression: “outputStyle” from Sass and compressCSS().
  */
 gulp.task('compileCSSForProd', function () {
-    return gulp.src(sassMainFile)
+    return gulp.src(sassSourceFileForProd)
         .pipe(sass({
             outputStyle: 'compressed',
             precision: 10
@@ -121,20 +131,20 @@ gulp.task('compileCSSForProd', function () {
 });
 
 /**
- * CONCATENATE JAVASCRIPT FILES
+ * COMPILE ALL JAVASCRIPT FILES INTO ONE FILE FOR DEVELOPMENT WORK
  *
- * This task concatenates all the files in the preConcatenatedJSFiles array, using
- * the JSConcatenator, then writes the result to the JSDevTargetFolder with the
- * filename value to the JSTargetFilename variable.
+ * This task compiles preCompiledJavaScriptFilesWithGrid via the
+ * compileJavaScript concatenator, then writes the result to the
+ * javaScriptDevTargetFolder with filename javaScriptTargetFilename.
  */
-gulp.task('concatenateJSFiles', function () {
-    return gulp.src(preConcatenatedJSFiles)
+gulp.task('compileJSForDev', function () {
+    return gulp.src(preCompiledJSFilesWithGrid)
         .pipe(JSConcatenator(JSTargetFilename))
         .pipe(gulp.dest(JSDevTargetFolder));
 });
 
 /**
- * CONCATENATE JAVASCRIPT FOR PRODUCTION
+ * COMPILE ALL JAVASCRIPT FILES INTO A SINGLE FILE FOR PRODUCTION
  *
  * This task compiles one or more JavaScript files into a single file whose name is
  * the value to the JSTargetFilename variable. The resulting file is compressed then
@@ -142,8 +152,9 @@ gulp.task('concatenateJSFiles', function () {
  *
  * Note: This task does not contain the grid used during development.
  */
-gulp.task('concatenateJSForProd', ['concatenateJSFiles'], function () {
-    return gulp.src(JSDevTargetFolder + '/' + JSTargetFilename)
+gulp.task('compileJSForProd', function () {
+    return gulp.src(preCompiledJSFilesWithoutGrid)
+        .pipe(JSConcatenator(JSTargetFilename))
         .pipe(JSCompressor())
         .pipe(gulp.dest(JSProdTargetFolder));
 });
@@ -151,24 +162,40 @@ gulp.task('concatenateJSForProd', ['concatenateJSFiles'], function () {
 /**
  * LINT JAVASCRIPT
  *
- * This task lints JavaScript (JS) using the linter defined by JSLinter, the second
- * pipe in this task. (ESLint is the linter in this case.) In order to generate a
- * linting report, the multiple JS files in the preConcatenatedJSFiles are
- * compiled into a single, memory-cached file with a temporary name, then sent to the
- * linter for processing.
+ * This task lints JavaScript using the linter defined by JSLinter, the second pipe
+ * in this task. (ESLint is the linter in this case.) In order to generate a linting
+ * report, the multiple JS files in the preCompiledJSFilesWithoutGrid are compiled
+ * into a single, memory-cached file with a temporary name, then sent to the linter
+ * for processing.
  *
  * Note: The temporary file is *not* written to a destination folder.
  */
 gulp.task('lintJS', function () {
-    return gulp.src(preConcatenatedJSFiles)
+    return gulp.src(preCompiledJSFilesWithoutGrid)
         .pipe(JSConcatenator(JSTargetFilename))
         .pipe(JSLinter({
             'rules': {
-                'indent': [2, 4],
-                'quotes': [2, 'single'],
-                'linebreak-style': [2, 'unix'],
-                'semi': [2, 'always'],
-                'max-len': [2, 85,4]
+                'indent': [
+                    2,
+                    4
+                ],
+                'quotes': [
+                    2,
+                    'single'
+                ],
+                'linebreak-style': [
+                    2,
+                    'unix'
+                ],
+                'semi': [
+                    2,
+                    'always'
+                ],
+                'max-len': [
+                    2,
+                    85,
+                    4
+                ]
             },
             'env': {
                 'node': true,
@@ -178,8 +205,8 @@ gulp.task('lintJS', function () {
         }))
         .pipe(JSLinter.formatEach('compact', process.stderr))
         //
-        // “To have the process exit with an error code (1) on lint error, return the
-        //  stream and pipe to failAfterError last.”
+        // “To have the process exit with an error code (1) on lint error, return
+        // the stream and pipe to failAfterError last.”
         //
         //     — https://github.com/adametry/gulp-eslint
         //
@@ -213,16 +240,17 @@ gulp.task('compressThenCopyImagesToProdFolder', function () {
  * those files are processed by other tasks, then copied after processing:
  *
  * — Images are compressed then copied by the compressThenCopyImagesToProdFolder task
- * — JavaScript is concatenated and compressed by the concatenateJSForProd task
+ * — JavaScript is concatenated and compressed by the compileJSForProd task
  * — Sass/CSS is concatenated and compressed by the compileCSSForProd task
  */
 gulp.task('copyUnprocessedAssetsToProdFolder', function () {
     return gulp.src([
-        devSourceFolder + '/*.*',                           // Source all files,
-        devSourceFolder + '/**',                            // and all folders, but
-        '!' + devSourceFolder + '/' + imagesFolder,         // ignore images;
-        '!' + devSourceFolder + '/**/*.js',                 // ignore JS;
-        '!' + devSourceFolder + '/' + sassCSSFolder + '/**' // ignore Sass/CSS.
+        devSourceFolder + '/*.*',                               // Source all files,
+        devSourceFolder + '/**',                                // and all folders,
+                                                                // but
+        '!' + devSourceFolder + '/' + imagesFolder,             // ignore images;
+        '!' + devSourceFolder + '/**/*.js',                     // ignore JS;
+        '!' + devSourceFolder + '/' + sassCSSFolder + '/**'     // ignore Sass/CSS.
     ], {dot: true}).pipe(gulp.dest(prodTargetFolder));
 });
 
@@ -239,7 +267,7 @@ gulp.task('build',
         'compressHTML',
         'compileCSSForProd',
         'lintJS',
-        'concatenateJSForProd',
+        'compileJSForProd',
         'compressThenCopyImagesToProdFolder',
         'copyUnprocessedAssetsToProdFolder'
     ]);
@@ -248,34 +276,32 @@ gulp.task('build',
  * SERVE
  *
  * Used for development only, this task compiles CSS via Sass, concatenates one or
- * more JavaScript (JS) files into a single file, lints it, then, finally, validates
- * HTML.
+ * more JavaScript files into a single file, lints JavaScript, then, finally,
+ * validates HTML.
  *
- * The localhost server looks for index.html from either the devTargetFolder or
- * the devSourceFolder as the first page to load. In this case, index.html is
- * *only* found in the devTargetFolder.
+ * The localhost server looks for index.html as the first page to load from either
+ * the temporary folder (devTargetFolder), the development folder (devSourceFolder),
+ * or the folder containing HTML (devSourceFolder + '/' + HTMLSourceFolder).
  *
- * Because Gulp uses a stream-based system over a file-based system, files that
- * require pre-processing must be written to a folder before being served.
- * Thus, this task serves HTML, CSS, and JavaScript from a temp folder, the
- * development target folder (devTargetFolder), while un-processed files, such
- * as fonts and images, are served from the development source folder
- * (devSourceFolder).
+ * Files that require pre-processing must be written to a folder before being served.
+ * Thus, this task serves CSS and JS from a temp folder, the development target
+ * folder (devTargetFolder), while un-processed files, such as fonts and images, are
+ * served from the development source folder (devSourceFolder).
  *
- * If a JavaScript file is changed, all JavaScript files are rebuilt, the
- * resulting file is linted, and the browser reloads. The same goes for HTML.
+ * If a JS file is changed, all JS files are rebuilt, the resulting file is linted,
+ * and the browser reloads.
  *
- * If a Sass file is changed, a re-compilation of the primary CSS file is
- * generated, and the browser reloads.
+ * If a Sass file is changed, a re-compilation of the primary CSS file is generated,
+ * and the browser reloads.
  *
  * Finally, changes to images also trigger a browser reload.
  */
 gulp.task('serve',
     [
-        'validateHTML',
         'compileCSSForDev',
-        'concatenateJSFiles',
-        'lintJS'
+        'compileJSForDev',
+        'lintJS',
+        'validateHTML'
     ],
     function () {
         browserSync({
@@ -284,15 +310,15 @@ gulp.task('serve',
             reloadDelay: 100,
             server: {
                 baseDir: [
-                    devSourceFolder,
                     devTargetFolder,
+                    devSourceFolder,
                     devSourceFolder + '/' + HTMLSourceFolder
                 ]
             }
         });
 
         gulp.watch(devSourceFolder + '/' + JSFolder + '/*.js',
-            ['concatenateJSFiles', 'lintJS']).on(
+            ['compileJSForDev', 'lintJS']).on(
             'change',
             reload
         );
@@ -302,7 +328,7 @@ gulp.task('serve',
             reload
         );
 
-        gulp.watch(devSourceFolder + '/' + HTMLSourceFolder + '/**/*.html',
+        gulp.watch([devSourceFolder + '/' + HTMLSourceFolder + '/**/*.html'],
             ['validateHTML']).on(
             'change',
             reload

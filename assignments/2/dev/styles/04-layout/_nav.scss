@@ -1,72 +1,56 @@
 nav {
-   position: relative;
-   margin: 80px auto 0;
+   display: none;
+   position: fixed;
+   top: 2.4 * $leading;
+   right: 1 * $grid-gutter;
    width: $width-nav;
    height: $height-nav-item;
+   cursor: pointer;
+   z-index: 5;
 
    a {
       display: block;
-      border: $width-border solid $color-border;
-
       color: $color-nav-links;
       text-align: center;
 
-      // Subtract the width of the right and left borders from the overall width of
-      // the nav item.
-      width: $width-nav-item - ( 2 * $width-border );
-
-      // Ensure that the entire height of nav item is consumed by the line-height
-      // of this item. Otherwise, vertical gaps will exist between this item and
-      // its parent, the nav element.
+      width: $width-nav-item;
       line-height: $height-nav-item;
    }
 
    a:hover {
-      background-color: $color-border;
    }
 
-   ul {
-      padding: 0;
-      margin: 0;
+   > ul {
+      position: absolute;      
       list-style-type: none;
+      width: 5 * $grid-width;
 
       > li {
-         // Float each top-level list item (“Menu 1” and “Menu 2”) next to each
-         // other.
-         float: left;
-         width: $width-nav-item;
-
-         // Because I need the inner unordered list to positionally bind absolutely
-         // to this list item, I must set the position property here to relative.
          position: relative;
+         display: block;
+         left: 1.85 * $grid-width;
+         width: $width-nav-item;
+         margin-bottom: 0.3 * $leading;
+         border-radius: $grid-width;
          background-color: $color-background-nav;
 
-         ul {
-            // Hide these nested unordered lists by default, showing them only when
-            // a user hovers over its parent. (See line 71 in this file.)
-            visibility: hidden;
-
-            // By setting this list’s position property to absolute, I allow content
-            // to appear underneath the first list, not this one. In doing so, when
-            // the user hovers her/his mouse over the primary list items, the
-            // secondary nav appears *on top* of the content.
+         > ul {
             position: absolute;
-            top: $height-nav-item + ( 2 * $width-border );
-            left: 0;
+            visibility: hidden;
+            height: 5 * $leading;
+            top: 0 * $leading;
+            right: 2.05 * $grid-width;
 
-            a {
-               // Uncomment both of the following variables, then uncomment and
-               // change the value of $height-inner-list-items in _variables.scss to
-               // modify the height and vertical alignment of each inner nav item.
-               //
-               // line-height: ( $height-inner-list-items );
-               // height: ( $height-inner-list-items );
-            }
-         }
-      }
+            > li {
+               border-radius: $grid-width;
+               background-color: $color-background-nav;
+               margin-bottom: 0.305 * $leading;                 
+            }  
+         }//end: ul
+      }//end: li
 
       > li:hover {
-         ul {
+          ul {
             visibility: visible;
          }
       }
