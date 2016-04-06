@@ -76,3 +76,9 @@ $menu-icon-height: 1 * $leading;
 	height: 0.1 * $leading;
 }
 
+main {
+	position: absolute;
+	left: 2 * $grid-gutter;
+	right: 2 * $grid-gutter;
+	top: 3 * $leading;
+}

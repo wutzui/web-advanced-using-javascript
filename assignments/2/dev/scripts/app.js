@@ -6,9 +6,6 @@ window.onload = function () {
     /*find the 1st li within #js-triggers*/
     var firstModalBtn = document.querySelector ('#js-triggers li:nth-of-type(2)');
 
-
-
-
     //set the append modal.
     var firstModal = document.createElement ('div');
     firstModal.id = 'first-modal';
@@ -38,7 +35,6 @@ window.onload = function () {
         }
     }
 
-
     // call the toggleModal function.
     firstModalBtn.addEventListener ('click', openFirstModal, false);
     body.addEventListener ('keydown', escClose, false);  
@@ -47,20 +43,28 @@ window.onload = function () {
     /******************************************************************************/
     //set the variables of drop-down menu trigger button
     /*find the 1st li within #js-triggers*/
-    // var dropDownBtn = document.querySelector ('#js-triggers li:nth-of-type(1)'); 
+    var dropDownBtn = document.querySelector ('#js-triggers li:nth-of-type(1)');
 
-    // var dropDown
+    var dropDownMenu = document.querySelector ('nav');
 
-    //set the click toggle modal function.
-    // function toggleModal() {
-    //     if (firstModal.style.display != 'block') {
-    //         openFirstModal();
-    //     } else {
-    //         xClose();
-    //     }
-    // }
+    function appendMenu() {
+        dropDownMenu.style.display ='block';
+    }
 
+    function hideMenu() {
+        dropDownMenu.style.display ='none';
+    }
 
 
+    //set the click toggle drop-down menu function.
+    function toggleMenu() {
+        if (dropDownMenu.style.display != 'block') {
+            appendMenu();
+        } else {
+            hideMenu();
+        }
+    }
+
+    dropDownBtn.addEventListener ('click', toggleMenu, false);
 
 };
