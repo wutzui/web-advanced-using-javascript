@@ -13,7 +13,9 @@ nav {
       left: 0;
       top: 0;
       height: 100%;
-      background-color: $color-background-nav;     
+      background-color: $color-background-nav;   
+      @include transition;   
+  
    }
 
    a {
@@ -52,6 +54,7 @@ nav {
 
          > ul {
             position: absolute;
+            opacity: 0;
             visibility: hidden;
             height: 5 * $leading;
             top: 0 * $leading;
@@ -71,6 +74,7 @@ nav {
       > li:hover {
           ul {
             visibility: visible;
+            @include transition;   
          }
       }
    }

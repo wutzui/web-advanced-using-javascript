@@ -68,6 +68,7 @@ header {
 
 #js-triggers li:nth-child(2):hover{
    background-color: white;
+   @include transition;   
 }
 
 // =================================================================================
@@ -83,11 +84,12 @@ header {
    background-color: rgb(10, 10, 10);
    border-radius:  1.5 * $grid-gutter;
    z-index: 5;
-   cursor: pointer;
+   cursor: pointer;   
 }
 
 #js-triggers li:nth-child(1):hover{
    background-color: white;
+   @include transition;   
 }
 
 .side-tray-btn {
