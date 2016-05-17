@@ -1,0 +1,27 @@
+// =================================================================================
+// header
+// =================================================================================
+
+header {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px;
+	opacity: 0;
+	@include transition;
+}
+
+header h4 {
+	width: 55px;
+	padding: 5px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0);
+	letter-spacing: 1px;
+	cursor: pointer;
+	@include transition;
+}
+
+header h4:hover {
+	border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
