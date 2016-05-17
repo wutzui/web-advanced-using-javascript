@@ -1,12 +1,15 @@
-# Web Advanced Using JavaScript at Parsons School of Design
-4 February 2016
+# 2016 Web Advanced Final Project
 
-This repository contains the assignments for the course Web Advanced (using JavaScript) at Parsons School of Design.
+### Interactive Music Video
 
-**Assignment 1**: [`assignments/1/`](assignments/1/)
+This is an interactive music video created as an experiment of keyboard interaction. The idea was inspired by Spencer Sheridan from Google Chrome Experiments. Some of the motion graphics are self-created or from giphy. The purpose of making this project is to learn and play with javascript and appreciate the amazing performance by Super Junior.
 
-**Assignment 2**: [`assignments/2/`](assignments/2/)
+### Another Repository
 
-**Assignment 3**: Pending
+Here is the link to another github repo and the live demo.
 
-**Assignment 4**: Pending
+https://github.com/wutzui/suju-devil-interactive-video
+
+The video shall take few secend to load.
+
+http://wutzui.github.io/suju-devil-interactive-video/index.html
